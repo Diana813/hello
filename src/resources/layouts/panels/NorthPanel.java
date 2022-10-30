@@ -3,7 +3,6 @@ package resources.layouts.panels;
 import client.Client;
 import resources.layouts.TextAreaLayout;
 import resources.strings.AppStrings;
-import resources.styles.AppColours;
 import resources.styles.AppTextArea;
 import resources.styles.SubmitButton;
 
@@ -14,11 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import java.awt.*;
-
-import static client.ClientHandler.connectedClients;
 import static resources.styles.AppColours.appNavyBlue;
-import static resources.styles.AppColours.appOrange;
 import static resources.styles.AppFonts.textFieldFont;
 import static resources.styles.AppImages.enter_icon;
 import static resources.styles.Dimensions.appMargin;

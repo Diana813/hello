@@ -1,6 +1,8 @@
 package resources.styles;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 import static resources.styles.Dimensions.appMargin;
 

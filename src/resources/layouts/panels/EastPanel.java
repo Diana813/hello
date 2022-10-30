@@ -1,10 +1,11 @@
 package resources.layouts.panels;
 
-import javax.swing.*;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.ListSelectionModel;
 
-import java.awt.*;
+import java.awt.Dimension;
 
-import static client.ClientHandler.connectedClients;
 
 public class EastPanel extends JPanel {
 

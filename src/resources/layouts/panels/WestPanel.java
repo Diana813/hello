@@ -1,7 +1,7 @@
 package resources.layouts.panels;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+import java.awt.Dimension;
 
 import static resources.styles.Dimensions.appMargin;
 

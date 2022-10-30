@@ -5,8 +5,12 @@ import resources.layouts.TextAreaLayout;
 import resources.styles.AppTextArea;
 import resources.styles.SubmitButton;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import java.awt.Dimension;
 
 import static resources.styles.AppImages.send_icon;
 

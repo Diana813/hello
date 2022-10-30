@@ -1,7 +1,6 @@
 package resources.styles;
 
-import javax.swing.*;
-import java.awt.Component;
+import javax.swing.JTextArea;
 import java.awt.Dimension;
 import java.awt.Insets;
 

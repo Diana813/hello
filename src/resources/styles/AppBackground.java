@@ -1,12 +1,10 @@
 package resources.styles;
 
-import javax.swing.*;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.EmptyBorder;
-import java.awt.*;
+import javax.swing.JPanel;
+import java.awt.Graphics;
+import java.awt.Image;
 
 import static resources.styles.AppImages.getBackgroundImage;
-import static resources.styles.Dimensions.appMargin;
 
 public class AppBackground extends JPanel {
     private final Image backgroundImage;

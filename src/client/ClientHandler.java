@@ -1,9 +1,8 @@
 package client;
 
-import org.w3c.dom.Text;
 import server.Server;
 
-import javax.swing.*;
+import javax.swing.JLabel;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
