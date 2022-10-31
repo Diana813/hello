@@ -7,6 +7,8 @@ public class AppStrings {
 
     public static String send = "Wyślij";
 
+    public static String usersList = "Użytkownicy:";
+
     public static String userConnected(String nickname){
         return String.format("%s dołączył/a do rozmowy!", nickname);
     }

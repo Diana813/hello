@@ -3,6 +3,7 @@ package resources.styles;
 import java.awt.Font;
 
 public class AppFonts {
-
-    public static Font textFieldFont = new Font("Consolas", Font.ITALIC, 20);
+    public static Font setAppLabelFont(int fontSize){
+        return new Font("Consolas", Font.ITALIC, fontSize);
+    }
 }

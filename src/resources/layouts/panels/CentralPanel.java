@@ -1,16 +1,16 @@
 package resources.layouts.panels;
 
+import java.awt.*;
 import org.w3c.dom.Text;
+import static resources.styles.Dimensions.defaultChatWindowHeight;
+import static resources.styles.Dimensions.defaultChatWindowWidth;
 
-import javax.swing.JPanel;
-
-import static resources.styles.AppColours.transparent;
-
-public class CentralPanel extends JPanel {
+public class CentralPanel extends Panel {
     private Text text;
     private NorthPanel northPanel;
 
     public CentralPanel(){
-        this.setBackground(transparent);
+        this.setPreferredSize(new Dimension(defaultChatWindowWidth, defaultChatWindowHeight));
     }
+
 }

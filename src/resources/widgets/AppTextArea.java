@@ -1,11 +1,10 @@
-package resources.styles;
+package resources.widgets;
 
-import javax.swing.JTextArea;
-import java.awt.Dimension;
-import java.awt.Insets;
-
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.plaf.basic.BasicBorders;
 import static resources.styles.AppColours.appNavyBlue;
-import static resources.styles.AppFonts.textFieldFont;
+import static resources.styles.AppFonts.setAppLabelFont;
 import static resources.styles.Dimensions.appMargin;
 import static resources.styles.Dimensions.defaultTextFieldHeight;
 import static resources.styles.Dimensions.defaultTextFieldWidth;
@@ -16,7 +15,7 @@ public class AppTextArea extends JTextArea {
         this.setRows(rows);
         this.setColumns(columns);
         this.setPreferredSize(new Dimension(defaultTextFieldWidth, defaultTextFieldHeight));
-        this.setFont(textFieldFont);
+        this.setFont(setAppLabelFont(20));
         this.setForeground(appNavyBlue);
         this.setMargin(new Insets(appMargin,appMargin,appMargin,appMargin));
         this.setLineWrap(true);

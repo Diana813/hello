@@ -1,14 +1,15 @@
 package resources.layouts.panels;
 
-import javax.swing.JPanel;
-import java.awt.Dimension;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.plaf.basic.BasicBorders;
 
-import static resources.styles.Dimensions.appMargin;
+public class WestPanel extends Panel{
 
-public class WestPanel extends JPanel {
-
-    public WestPanel() {
-
-        this.setPreferredSize(new Dimension(appMargin, 100));
+    public WestPanel(){
+        this.setLayout(new BorderLayout());
+        this.add(new NorthPanel(), BorderLayout.NORTH);
+        this.add(new CentralPanel(), BorderLayout.CENTER);
+        this.add(new SouthPanel(), BorderLayout.SOUTH);
     }
 }

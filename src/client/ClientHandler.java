@@ -1,8 +1,5 @@
 package client;
 
-import server.Server;
-
-import javax.swing.JLabel;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -10,8 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.ArrayList;
-
-import static resources.layouts.panels.EastPanel.connectedClientsView;
+import server.Server;
 
 
 public class ClientHandler implements Runnable {
@@ -35,7 +31,6 @@ public class ClientHandler implements Runnable {
             this.reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
             this.nickname = reader.readLine();
             connectedClients.add(this);
-            connectedClientsView.add(new JLabel(this.nickname));
             server.broadcastUserConnectedInfo(nickname, connectedClients);
 
         } catch (IOException e) {
@@ -75,7 +70,6 @@ public class ClientHandler implements Runnable {
     public void removeClientHandler() {
         int index = connectedClients.indexOf(this);
         connectedClients.remove(index);
-        connectedClientsView.remove(index);
         server.broadcastUserDisconnectedInfo(nickname, connectedClients);
     }
 }

@@ -1,9 +1,10 @@
-package resources.styles;
+package resources.widgets;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
+import resources.styles.AppColours;
 import static resources.styles.Dimensions.appMargin;
 
 public class SubmitButton extends JButton {

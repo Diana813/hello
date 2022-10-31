@@ -1,21 +1,24 @@
 package resources.layouts.panels;
 
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.ListSelectionModel;
+import client.ClientHandler;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.plaf.basic.BasicBorders;
+import static resources.strings.AppStrings.usersList;
+import static resources.styles.Dimensions.eastPanelDim;
+import resources.widgets.AppLabel;
 
-import java.awt.Dimension;
 
+public class EastPanel extends Panel {
 
-public class EastPanel extends JPanel {
+    private JList<ClientHandler> connectedClients = new JList<>();
 
-    public static JList connectedClientsView =new JList<String>();
-    public EastPanel(){
+    public EastPanel() {
+        this.setPreferredSize(new Dimension(eastPanelDim, eastPanelDim));
+        this.setBorder(new BasicBorders.FieldBorder(Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE));
 
-        this.setPreferredSize(new Dimension(50, 100));
-        connectedClientsView.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-        connectedClientsView.setLayoutOrientation(JList.HORIZONTAL_WRAP);
-        connectedClientsView.setVisibleRowCount(-1);
-        this.add(connectedClientsView);
+        this.setBackground(null);
+        this.add(new AppLabel(usersList, 15));
+        this.add(connectedClients);
     }
 }
