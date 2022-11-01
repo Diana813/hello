@@ -1,12 +1,9 @@
 package resources.layouts;
 
-import java.awt.BorderLayout;
-import java.util.ArrayList;
-import javax.swing.DefaultListModel;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
-import javax.swing.JList;
-import resources.layouts.panels.EastPanel;
 import resources.layouts.panels.WestPanel;
+import resources.layouts.panels.EastPanel;
 import static resources.strings.AppStrings.appTitle;
 import static resources.styles.AppImages.logo;
 import resources.widgets.AppBackground;
@@ -18,11 +15,11 @@ public class ChatLayout extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setIconImage(logo.getImage());
         this.setContentPane(new AppBackground());
-        this.setLayout(new BorderLayout());
-        this.add(new EastPanel(), BorderLayout.CENTER);
-        this.add(new WestPanel(), BorderLayout.WEST);
+        this.getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.X_AXIS));
+        WestPanel westPanel = new WestPanel();
+        this.add(westPanel);
+        this.add(new EastPanel(westPanel));
         this.pack();
-        this.setResizable(false);
         this.setVisible(true);
     }
 

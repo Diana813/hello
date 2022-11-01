@@ -1,13 +1,28 @@
 package resources.layouts.panels;
 
-import java.awt.BorderLayout;
+import java.awt.Dimension;
+import static resources.strings.AppStrings.usersList;
+import static resources.styles.AppColors.appNavyBlue;
+import static resources.styles.AppColors.appOrange;
+import static resources.styles.Dimensions.eastPanelDim;
+import resources.widgets.AppLabel;
+import resources.widgets.AppUserList;
+
 
 public class WestPanel extends Panel {
 
+    private final AppUserList connectedUsers = new AppUserList();
+
     public WestPanel() {
-        this.setLayout(new BorderLayout());
-        this.add(new NorthPanel(), BorderLayout.NORTH);
-        this.add(new CentralPanel(), BorderLayout.CENTER);
-        this.add(new SouthPanel(), BorderLayout.SOUTH);
+        this.setPreferredSize(new Dimension(eastPanelDim, eastPanelDim));
+        this.setBackground(appNavyBlue);
+        this.add(new AppLabel(usersList, 15, appOrange));
+        this.add(connectedUsers);
+    }
+
+    public void displayConnectedUsers(String newConnectedUser) {
+        if (!connectedUsers.getModel().contains(newConnectedUser)) {
+            connectedUsers.getModel().addElement(newConnectedUser);
+        }
     }
 }

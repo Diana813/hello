@@ -6,9 +6,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import static resources.styles.Dimensions.appMargin;
 
-public class SubmitButton extends JButton {
+public class AppSubmitButton extends JButton {
 
-    public SubmitButton(ImageIcon buttonIcon){
+    public AppSubmitButton(ImageIcon buttonIcon){
         this.setContentAreaFilled(true);
         this.setBackground(Color.white);
         this.setIcon(buttonIcon);

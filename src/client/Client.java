@@ -7,7 +7,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import resources.layouts.ChatLayout;
-import static resources.layouts.panels.EastPanel.connectedClientsListModel;
+import resources.layouts.panels.CentralPanel;
+import resources.layouts.panels.WestPanel;
 
 public class Client {
 
@@ -15,8 +16,12 @@ public class Client {
     private BufferedReader reader;
     private BufferedWriter writer;
     private ClientConnectionHandler connectionHandler;
+    private final WestPanel westPanel;
+    private final CentralPanel centralPanel;
 
-    public Client() {
+    public Client(WestPanel westPanel, CentralPanel centralPanel) {
+        this.westPanel = westPanel;
+        this.centralPanel = centralPanel;
         try {
             this.socket = new Socket("localhost", 9999);
             this.writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
@@ -55,13 +60,15 @@ public class Client {
 
     private void displayMessage(String message) {
         if (message.contains("user: ")) {
-            connectedClientsListModel.addElement(message.replace("user: ", ""));
+            westPanel.displayConnectedUsers(message.replace("user: ", ""));
         } else {
-
+            centralPanel.displayMessage(message);
         }
     }
 
     public static void main(String[] args) {
         new ChatLayout();
     }
+
+
 }

@@ -4,11 +4,9 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.basic.BasicBorders;
 import resources.layouts.panels.Panel;
-import static resources.styles.AppColours.appNavyBlue;
-import static resources.styles.Dimensions.appMargin;
+import static resources.styles.AppColors.appNavyBlue;
 
 public class UserInputLayout extends Panel {
 

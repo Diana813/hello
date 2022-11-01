@@ -7,10 +7,10 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import resources.layouts.UserInputLayout;
-import static resources.styles.AppColours.appOrangeLight;
+import static resources.styles.AppColors.appOrangeLight;
 import static resources.styles.AppImages.send_icon;
 import resources.widgets.AppTextArea;
-import resources.widgets.SubmitButton;
+import resources.widgets.AppSubmitButton;
 
 public class SouthPanel extends Panel {
 
@@ -32,7 +32,7 @@ public class SouthPanel extends Panel {
     }
 
     private JButton addSubmitButton() {
-        JButton button = new SubmitButton(send_icon);
+        JButton button = new AppSubmitButton(send_icon);
         button.addActionListener(e -> sendMessage());
         return button;
     }

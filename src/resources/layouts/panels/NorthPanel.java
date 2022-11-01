@@ -7,19 +7,24 @@ import javax.swing.JTextArea;
 import resources.layouts.UserInputLayout;
 import static resources.strings.AppStrings.anonymousUser;
 import static resources.strings.AppStrings.enterYourNickname;
-import static resources.styles.AppColours.appNavyBlue;
+import static resources.styles.AppColors.appNavyBlue;
 import static resources.styles.AppImages.enter_icon;
 import resources.widgets.AppLabel;
 import resources.widgets.AppTextArea;
-import resources.widgets.SubmitButton;
+import resources.widgets.AppSubmitButton;
 
 public class NorthPanel extends Panel {
 
     private final JTextArea textArea;
     private final JButton button;
     private String username;
+    private final WestPanel westPanel;
+    private final CentralPanel centralPanel;
 
-    public NorthPanel() {
+
+    public NorthPanel(WestPanel westPanel, CentralPanel centralPanel) {
+        this.westPanel = westPanel;
+        this.centralPanel = centralPanel;
         this.setLayout(new GridLayout(2, 1));
         this.add(new AppLabel(enterYourNickname, 20, appNavyBlue));
         this.button = addSubmissionButton();
@@ -38,13 +43,13 @@ public class NorthPanel extends Panel {
 
     private void getNicknameAndConnectUser() {
         getUserNameAndDisableButton();
-        Client client = new Client();
+        Client client = new Client(westPanel, centralPanel);
         client.getMessagesFromOtherUsers();
         client.sendMessage(username);
     }
 
-    private SubmitButton addSubmissionButton() {
-        SubmitButton button = new SubmitButton(enter_icon);
+    private AppSubmitButton addSubmissionButton() {
+        AppSubmitButton button = new AppSubmitButton(enter_icon);
         button.addActionListener(e -> getNicknameAndConnectUser());
         return button;
     }

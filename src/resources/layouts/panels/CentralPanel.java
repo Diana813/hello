@@ -1,16 +1,18 @@
 package resources.layouts.panels;
 
 import java.awt.Dimension;
-import org.w3c.dom.Text;
+import static resources.styles.AppColors.appNavyBlue;
 import static resources.styles.Dimensions.defaultChatWindowHeight;
 import static resources.styles.Dimensions.defaultChatWindowWidth;
+import resources.widgets.AppLabel;
 
 public class CentralPanel extends Panel {
-    private Text text;
-    private NorthPanel northPanel;
-
-    public CentralPanel(){
+    public CentralPanel() {
         this.setPreferredSize(new Dimension(defaultChatWindowWidth, defaultChatWindowHeight));
     }
 
+    public void displayMessage(String message) {
+        AppLabel label = new AppLabel(message, 15, appNavyBlue);
+        this.add(label);
+    }
 }
