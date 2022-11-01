@@ -1,8 +1,8 @@
 package resources.widgets;
 
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.plaf.basic.BasicBorders;
+import java.awt.Dimension;
+import java.awt.Insets;
+import javax.swing.JTextArea;
 import static resources.styles.AppColours.appNavyBlue;
 import static resources.styles.AppFonts.setAppLabelFont;
 import static resources.styles.Dimensions.appMargin;

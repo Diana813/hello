@@ -1,11 +1,12 @@
 package resources.layouts.panels;
 
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Dimension;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import resources.layouts.UserInputLayout;
-import static resources.styles.AppColours.appNavyBlue;
-import static resources.styles.AppColours.appOrange;
 import static resources.styles.AppColours.appOrangeLight;
 import static resources.styles.AppImages.send_icon;
 import resources.widgets.AppTextArea;
@@ -25,7 +26,7 @@ public class SouthPanel extends Panel {
         JScrollPane scrollPane = new JScrollPane(textArea);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scrollPane.setPreferredSize(new Dimension(0, 100));
+        scrollPane.setPreferredSize(new Dimension(0, 50));
         scrollPane.getVerticalScrollBar().setBackground(appOrangeLight);
         return scrollPane;
     }

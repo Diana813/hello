@@ -1,9 +1,8 @@
 package resources.widgets;
 
-import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Image;
-
+import javax.swing.JPanel;
 import static resources.styles.AppImages.getBackgroundImage;
 
 public class AppBackground extends JPanel {

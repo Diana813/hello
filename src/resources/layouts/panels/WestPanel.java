@@ -1,12 +1,10 @@
 package resources.layouts.panels;
 
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.plaf.basic.BasicBorders;
+import java.awt.BorderLayout;
 
-public class WestPanel extends Panel{
+public class WestPanel extends Panel {
 
-    public WestPanel(){
+    public WestPanel() {
         this.setLayout(new BorderLayout());
         this.add(new NorthPanel(), BorderLayout.NORTH);
         this.add(new CentralPanel(), BorderLayout.CENTER);

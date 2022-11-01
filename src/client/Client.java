@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
-import java.util.Scanner;
+import resources.layouts.ChatLayout;
 
 public class Client {
 
@@ -15,7 +15,7 @@ public class Client {
     private BufferedWriter writer;
     private ClientConnectionHandler connectionHandler;
 
-    public Client(String nickname) {
+    public Client() {
         try {
             this.socket = new Socket("localhost", 9999);
             this.writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
@@ -27,15 +27,11 @@ public class Client {
         }
     }
 
-    public void sendMessage() {
+    public void sendMessage(String message) {
         try {
-            Scanner scanner = new Scanner(System.in);
-            while (socket.isConnected()) {
-                String message = scanner.nextLine();
-                writer.write(message);
-                writer.newLine();
-                writer.flush();
-            }
+            writer.write(message);
+            writer.newLine();
+            writer.flush();
 
         } catch (IOException e) {
             connectionHandler.closeClientConnection(socket, writer, reader);
@@ -43,7 +39,6 @@ public class Client {
     }
 
     public void getMessagesFromOtherUsers() {
-
         new Thread(() -> {
             String messageFromChat;
             while (socket.isConnected()) {
@@ -57,4 +52,7 @@ public class Client {
         }).start();
     }
 
+    public static void main(String[] args) {
+        new ChatLayout();
+    }
 }

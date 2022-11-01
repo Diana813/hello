@@ -1,6 +1,6 @@
 package resources.layouts.panels;
 
-import java.awt.*;
+import java.awt.Dimension;
 import org.w3c.dom.Text;
 import static resources.styles.Dimensions.defaultChatWindowHeight;
 import static resources.styles.Dimensions.defaultChatWindowWidth;

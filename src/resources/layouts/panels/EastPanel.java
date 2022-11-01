@@ -1,24 +1,30 @@
 package resources.layouts.panels;
 
-import client.ClientHandler;
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.plaf.basic.BasicBorders;
+import java.awt.Dimension;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import static resources.strings.AppStrings.usersList;
+import static resources.styles.AppColours.appNavyBlueLight;
+import static resources.styles.AppColours.appOrange;
+import static resources.styles.AppFonts.setAppLabelFont;
 import static resources.styles.Dimensions.eastPanelDim;
 import resources.widgets.AppLabel;
 
 
 public class EastPanel extends Panel {
 
-    private JList<ClientHandler> connectedClients = new JList<>();
+    public JList<String> connectedClients = new JList<>();
+    public DefaultListModel<String> connectedClientsListModel = new DefaultListModel<>();
 
     public EastPanel() {
         this.setPreferredSize(new Dimension(eastPanelDim, eastPanelDim));
-        this.setBorder(new BasicBorders.FieldBorder(Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE));
-
-        this.setBackground(null);
-        this.add(new AppLabel(usersList, 15));
+        connectedClients.setBackground(null);
+        connectedClients.setForeground(appOrange);
+        connectedClients.setFont(setAppLabelFont(15));
+        connectedClients.setModel(connectedClientsListModel);
+        this.add(connectedClients);
+        this.setBackground(appNavyBlueLight);
+        this.add(new AppLabel(usersList, 15, appOrange));
         this.add(connectedClients);
     }
 }

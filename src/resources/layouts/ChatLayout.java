@@ -1,19 +1,12 @@
 package resources.layouts;
 
-import javax.swing.*;
-import resources.layouts.panels.CentralPanel;
-import resources.layouts.panels.EastPanel;
-import resources.layouts.panels.NorthPanel;
-import resources.layouts.panels.SouthPanel;
-import resources.layouts.panels.WestPanel;
-import resources.widgets.AppBackground;
-
 import java.awt.BorderLayout;
-
-import static resources.styles.AppImages.logo;
-import static resources.styles.Dimensions.defaultChatWindowHeight;
-import static resources.styles.Dimensions.defaultChatWindowWidth;
+import javax.swing.JFrame;
+import resources.layouts.panels.EastPanel;
+import resources.layouts.panels.WestPanel;
 import static resources.strings.AppStrings.appTitle;
+import static resources.styles.AppImages.logo;
+import resources.widgets.AppBackground;
 
 public class ChatLayout extends JFrame {
 
@@ -26,6 +19,7 @@ public class ChatLayout extends JFrame {
         this.add(new EastPanel(), BorderLayout.CENTER);
         this.add(new WestPanel(), BorderLayout.WEST);
         this.pack();
+        this.setResizable(false);
         this.setVisible(true);
     }
 

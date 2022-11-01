@@ -9,6 +9,8 @@ public class AppStrings {
 
     public static String usersList = "Użytkownicy:";
 
+    public static String anonymousUser = "John Doe";
+
     public static String userConnected(String nickname){
         return String.format("%s dołączył/a do rozmowy!", nickname);
     }

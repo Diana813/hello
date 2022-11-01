@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="Remove wildcard imports">
-      <change afterPath="$PROJECT_DIR$/src/resources/layouts/panels/Panel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/widgets/AppLabel.java" afterDir="false" />
+    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="Layout changes">
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/ClientConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/ChatLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/ChatLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/TextAreaLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/UserInputLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/UserInputLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/UserInputLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/CentralPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/CentralPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/NorthPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/NorthPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/SouthPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/SouthPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/WestPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/WestPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/strings/AppStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/strings/AppStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppBackground.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/styles/AppColours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppColours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppFonts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppFonts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppTextArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/styles/Dimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/Dimensions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/styles/SubmitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/SubmitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppTextArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/SubmitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/SubmitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ServerConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ServerConnectionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -67,7 +70,7 @@
       <recent name="C:\Users\diana\IdeaProjects\hello\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="ChatLayout" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="resources.layouts.ChatLayout" />
       <module name="hello" />
@@ -86,7 +89,7 @@
       <module name="hello" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="client.*" />
+          <option name="PATTERN" value="server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,9 +125,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ChatLayout" />
       </list>
     </recent_temporary>
@@ -152,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667124352597</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Layout changes">
+      <created>1667212534335</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667212534335</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +179,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Backend and gui not connected" />
     <MESSAGE value="Remove wildcard imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove wildcard imports" />
+    <MESSAGE value="Layout changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout changes" />
   </component>
 </project>
