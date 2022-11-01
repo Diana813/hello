@@ -1,6 +1,7 @@
 package resources.layouts.panels;
 
 import java.awt.Dimension;
+import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import static resources.strings.AppStrings.usersList;
@@ -13,18 +14,21 @@ import resources.widgets.AppLabel;
 
 public class EastPanel extends Panel {
 
-    public JList<String> connectedClients = new JList<>();
-    public DefaultListModel<String> connectedClientsListModel = new DefaultListModel<>();
+    public static DefaultListModel<String> connectedClientsListModel = new DefaultListModel<>();
 
     public EastPanel() {
         this.setPreferredSize(new Dimension(eastPanelDim, eastPanelDim));
+        this.setBackground(appNavyBlueLight);
+        this.add(new AppLabel(usersList, 15, appOrange));
+        this.add(createUsersList());
+    }
+
+    private JList<String> createUsersList() {
+        JList<String> connectedClients = new JList<>();
         connectedClients.setBackground(null);
         connectedClients.setForeground(appOrange);
         connectedClients.setFont(setAppLabelFont(15));
         connectedClients.setModel(connectedClientsListModel);
-        this.add(connectedClients);
-        this.setBackground(appNavyBlueLight);
-        this.add(new AppLabel(usersList, 15, appOrange));
-        this.add(connectedClients);
+        return connectedClients;
     }
 }

@@ -14,7 +14,6 @@ public class UserInputLayout extends Panel {
 
     public UserInputLayout(JButton button, JScrollPane scrollPane) {
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
-        this.setBorder(new EmptyBorder(appMargin, appMargin, appMargin, appMargin));
         this.setBorder(new BasicBorders.FieldBorder(appNavyBlue, appNavyBlue, appNavyBlue, appNavyBlue));
         this.add(scrollPane);
         this.add(button);
@@ -22,7 +21,6 @@ public class UserInputLayout extends Panel {
 
     public UserInputLayout(JTextArea textArea, JButton button) {
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
-        this.setBorder(new EmptyBorder(appMargin, appMargin, appMargin, appMargin));
         this.setBorder(new BasicBorders.FieldBorder(appNavyBlue,appNavyBlue, appNavyBlue, appNavyBlue));
         this.add(textArea);
         this.add(button);

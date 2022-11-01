@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ClientHandler implements Runnable {
@@ -21,7 +22,6 @@ public class ClientHandler implements Runnable {
     private Server server;
     private ClientConnectionHandler connectionHandler;
 
-
     public ClientHandler(Socket client) {
         try {
             this.client = client;
@@ -32,6 +32,7 @@ public class ClientHandler implements Runnable {
             this.nickname = reader.readLine();
             connectedClients.add(this);
             server.broadcastUserConnectedInfo(nickname, connectedClients);
+            server.broadcastConnectedUsersList(connectedClients);
 
         } catch (IOException e) {
             connectionHandler.closeClientConnection(client, writer, reader, this);
@@ -66,9 +67,26 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    public void sendConnectedUsersList(List<String> connectedUsers) {
+        connectedUsers.forEach(user -> {
+            try {
+                writer.write("user: " + user);
+                writer.newLine();
+                writer.flush();
+            } catch (IOException e) {
+                connectionHandler.closeClientConnection(client, writer, reader, this);
+            }
+        });
+    }
+
 
     public void removeClientHandler() {
         connectedClients.remove(this);
         server.broadcastUserDisconnectedInfo(nickname, connectedClients);
+    }
+
+    @Override
+    public String toString() {
+        return nickname;
     }
 }

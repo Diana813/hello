@@ -28,6 +28,12 @@ public class Server {
         connectedClients.forEach(it -> it.sendMessage(userConnected(nickname)));
     }
 
+    public void broadcastConnectedUsersList(ArrayList<ClientHandler> connectedClients) {
+        connectedClients.forEach(it -> {
+            it.sendConnectedUsersList(connectedClients.stream().map(Object::toString).toList());
+        });
+    }
+
     public void broadcastUserDisconnectedInfo(String nickname, ArrayList<ClientHandler> connectedClients) {
         connectedClients.forEach(it -> it.sendMessage(userDisconnected(nickname)));
     }

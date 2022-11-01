@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="Layout changes">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="Connecting user by button clicked">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientConnectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/ChatLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/ChatLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/UserInputLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/UserInputLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/CentralPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/CentralPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/NorthPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/NorthPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/SouthPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/SouthPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/WestPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/WestPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/strings/AppStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/strings/AppStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppColours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppColours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppBackground.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppTextArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/widgets/SubmitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/SubmitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ServerConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ServerConnectionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667212534335</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Connecting user by button clicked">
+      <created>1667288760606</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667288760606</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,6 +171,7 @@
     <MESSAGE value="Backend and gui not connected" />
     <MESSAGE value="Remove wildcard imports" />
     <MESSAGE value="Layout changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout changes" />
+    <MESSAGE value="Connecting user by button clicked" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connecting user by button clicked" />
   </component>
 </project>

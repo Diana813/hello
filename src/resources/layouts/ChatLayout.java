@@ -1,7 +1,10 @@
 package resources.layouts;
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
+import javax.swing.JList;
 import resources.layouts.panels.EastPanel;
 import resources.layouts.panels.WestPanel;
 import static resources.strings.AppStrings.appTitle;

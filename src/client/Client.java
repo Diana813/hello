@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import resources.layouts.ChatLayout;
+import static resources.layouts.panels.EastPanel.connectedClientsListModel;
 
 public class Client {
 
@@ -44,12 +45,20 @@ public class Client {
             while (socket.isConnected()) {
                 try {
                     messageFromChat = reader.readLine();
-                    System.out.println(messageFromChat);
+                    displayMessage(messageFromChat);
                 } catch (IOException e) {
                     connectionHandler.closeClientConnection(socket, writer, reader);
                 }
             }
         }).start();
+    }
+
+    private void displayMessage(String message) {
+        if (message.contains("user: ")) {
+            connectedClientsListModel.addElement(message.replace("user: ", ""));
+        } else {
+
+        }
     }
 
     public static void main(String[] args) {
