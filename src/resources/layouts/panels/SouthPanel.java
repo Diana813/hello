@@ -1,10 +1,13 @@
 package resources.layouts.panels;
 
 
+import client.Client;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import resources.layouts.UserInputLayout;
+import static resources.strings.AppStrings.loginError;
+import static resources.styles.AppDimensions.textAreaDimension;
 import static resources.styles.AppImages.send_icon;
 import resources.widgets.AppScrollPane;
 import resources.widgets.AppSubmitButton;
@@ -14,11 +17,13 @@ public class SouthPanel extends Panel {
 
     private final JTextArea textArea;
     private final NorthPanel northPanel;
+    private final CentralPanel centralPanel;
 
-    public SouthPanel(NorthPanel northPanel) {
+    public SouthPanel(NorthPanel northPanel, CentralPanel centralPanel) {
         this.northPanel = northPanel;
+        this.centralPanel = centralPanel;
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
-        this.textArea = new AppTextArea(30, 1);
+        this.textArea = new AppTextArea(30, 1, 20, textAreaDimension);
         this.add(new UserInputLayout(addSubmitButton(), new AppScrollPane(0, 50, textArea)));
     }
 
@@ -30,7 +35,9 @@ public class SouthPanel extends Panel {
 
     private void sendMessage() {
         String message = textArea.getText();
-        if (!message.isEmpty()) {
+        if (northPanel.getClient() == null) {
+            centralPanel.displayMessage(loginError);
+        } else if (!message.isEmpty()) {
             northPanel.getClient().sendMessage(textArea.getText());
             textArea.setText("");
         }

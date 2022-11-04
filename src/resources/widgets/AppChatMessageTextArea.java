@@ -1,18 +1,14 @@
 package resources.widgets;
 
-import java.awt.Dimension;
 import javax.swing.plaf.basic.BasicBorders;
 import static resources.strings.AppStrings.me;
 import static resources.styles.AppColors.appNavyBlue;
-import resources.styles.AppDimensions;
-import static resources.styles.AppFonts.setAppLabelFont;
+import static resources.styles.AppDimensions.messageTextAreaDimension;
 
 public class AppChatMessageTextArea extends AppTextArea {
 
-    public AppChatMessageTextArea(int rows, int columns, int fontSize, String message) {
-        super(rows, columns);
-        this.setPreferredSize(new Dimension(AppDimensions.defaultChatWindowWidth - 30, 50));
-        this.setFont(setAppLabelFont(fontSize));
+    public AppChatMessageTextArea(String message) {
+        super(1, 1, 15, messageTextAreaDimension);
         this.setText(message.replace(me, ""));
         this.setEditable(false);
         this.setBorder(new BasicBorders.FieldBorder(appNavyBlue, appNavyBlue, appNavyBlue, appNavyBlue));

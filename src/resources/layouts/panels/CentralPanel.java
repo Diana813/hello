@@ -2,6 +2,7 @@ package resources.layouts.panels;
 
 import javax.swing.BoxLayout;
 import resources.layouts.UserMessageLayout;
+import static resources.strings.AppStrings.loginError;
 import static resources.strings.AppStrings.userAdded;
 import static resources.strings.AppStrings.userRemoved;
 import static resources.styles.AppColors.appNavyBlue;
@@ -26,6 +27,6 @@ public class CentralPanel extends Panel {
     }
 
     private boolean isMessageFromServer(String message) {
-        return message.contains(userAdded) || message.contains(userRemoved);
+        return message.contains(userAdded) || message.contains(userRemoved) || message.contains(loginError);
     }
 }

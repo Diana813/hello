@@ -8,6 +8,8 @@ import resources.layouts.UserInputLayout;
 import static resources.strings.AppStrings.anonymousUser;
 import static resources.strings.AppStrings.enterYourNickname;
 import static resources.styles.AppColors.appNavyBlue;
+import resources.styles.AppDimensions;
+import static resources.styles.AppDimensions.textAreaDimension;
 import static resources.styles.AppImages.enter_icon;
 import resources.widgets.AppLabel;
 import resources.widgets.AppTextArea;
@@ -29,7 +31,7 @@ public class NorthPanel extends Panel {
         this.setLayout(new GridLayout(2, 1));
         this.add(new AppLabel(enterYourNickname, 20, appNavyBlue));
         this.button = addSubmissionButton();
-        this.textArea = new AppTextArea(1, 1);
+        this.textArea = new AppTextArea(1, 1, 20, textAreaDimension);
         this.add(new UserInputLayout(textArea, button));
     }
 
@@ -57,6 +59,10 @@ public class NorthPanel extends Panel {
 
     public Client getClient() {
         return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
 }

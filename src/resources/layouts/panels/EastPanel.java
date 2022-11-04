@@ -12,7 +12,7 @@ public class EastPanel extends Panel {
         NorthPanel northPanel = new NorthPanel(westPanel, centralPanel);
         this.add(centralPanel, BorderLayout.CENTER);
         this.add(northPanel, BorderLayout.NORTH);
-        this.add(new SouthPanel(northPanel), BorderLayout.SOUTH);
+        this.add(new SouthPanel(northPanel, centralPanel), BorderLayout.SOUTH);
         this.add(new AppScrollPane(0, defaultChatWindowHeight, centralPanel));
     }
 }

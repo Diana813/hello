@@ -15,6 +15,8 @@ public class AppStrings {
 
     public static String userRemoved = "opuścił/a rozmowę!";
 
+    public static String loginError = "Nie jesteś zalogowany/a!";
+
     public static String userConnected(String nickname) {
         return String.format("%s " + userAdded, nickname);
     }
