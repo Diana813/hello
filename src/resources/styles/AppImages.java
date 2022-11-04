@@ -12,6 +12,8 @@ public class AppImages {
 
     public static final ImageIcon enter_icon = new ImageIcon("images/enter.png");
 
+    public static final ImageIcon user_icon = new ImageIcon("images/icon_user.png");
+
     public static Image getBackgroundImage() {
         return Toolkit.getDefaultToolkit().createImage("images/chatAppBackground.png");
     }

@@ -4,6 +4,7 @@ package server;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.ArrayList;
+import static resources.strings.AppStrings.me;
 import static resources.strings.AppStrings.userConnected;
 import static resources.strings.AppStrings.userDisconnected;
 
@@ -19,7 +20,7 @@ public class Server {
             if (!it.nickname.equals(nickname)) {
                 it.sendMessage(nickname + ": " + message);
             } else {
-                it.sendMessage(String.format("Me: %s", message));
+                it.sendMessage(String.format(me + " %s", message));
             }
         });
     }

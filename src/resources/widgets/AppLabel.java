@@ -4,7 +4,7 @@ import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import static resources.styles.AppFonts.setAppLabelFont;
-import static resources.styles.Dimensions.appMargin;
+import static resources.styles.AppDimensions.appMargin;
 
 public class AppLabel extends JLabel {
 

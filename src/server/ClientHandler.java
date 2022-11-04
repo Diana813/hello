@@ -45,11 +45,9 @@ public class ClientHandler implements Runnable {
         String message;
 
         while (client.isConnected()) {
-
             try {
                 message = reader.readLine();
                 server.broadcastMessage(message, nickname, connectedClients);
-
             } catch (IOException e) {
                 connectionHandler.closeClientConnection(client, writer, reader, this);
                 break;

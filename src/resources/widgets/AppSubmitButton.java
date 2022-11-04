@@ -4,7 +4,7 @@ import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import static resources.styles.Dimensions.appMargin;
+import static resources.styles.AppDimensions.appMargin;
 
 public class AppSubmitButton extends JButton {
 

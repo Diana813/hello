@@ -9,6 +9,7 @@ import java.net.Socket;
 import resources.layouts.ChatLayout;
 import resources.layouts.panels.CentralPanel;
 import resources.layouts.panels.WestPanel;
+import static resources.strings.AppStrings.userRemoved;
 
 public class Client {
 
@@ -38,7 +39,6 @@ public class Client {
             writer.write(message);
             writer.newLine();
             writer.flush();
-
         } catch (IOException e) {
             connectionHandler.closeClientConnection(socket, writer, reader);
         }
@@ -59,16 +59,30 @@ public class Client {
     }
 
     private void displayMessage(String message) {
-        if (message.contains("user: ")) {
-            westPanel.displayConnectedUsers(message.replace("user: ", ""));
+        if (isElementFromConnectedUsersList(message)) {
+            westPanel.displayConnectedUser(getUsernameFromServerMessage(message, "user: "));
+        }else if(isUserDisconnectedInfo(message)){
+            westPanel.removeDisconnectedUserFromTheList(getUsernameFromServerMessage(message, userRemoved));
+            centralPanel.displayMessage(message);
         } else {
             centralPanel.displayMessage(message);
         }
     }
 
+    private String getUsernameFromServerMessage(String message, String substringToRemove){
+        return message.replace(substringToRemove, "").trim();
+    }
+
+    private boolean isElementFromConnectedUsersList(String message){
+        return message.contains("user: ");
+    }
+
+    private boolean isUserDisconnectedInfo(String message){
+        return message.contains(userRemoved);
+    }
+
     public static void main(String[] args) {
         new ChatLayout();
     }
-
 
 }

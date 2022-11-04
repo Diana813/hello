@@ -1,34 +1,25 @@
 package resources.layouts.panels;
 
 
-import java.awt.Dimension;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import resources.layouts.UserInputLayout;
-import static resources.styles.AppColors.appOrangeLight;
 import static resources.styles.AppImages.send_icon;
-import resources.widgets.AppTextArea;
+import resources.widgets.AppScrollPane;
 import resources.widgets.AppSubmitButton;
+import resources.widgets.AppTextArea;
 
 public class SouthPanel extends Panel {
 
     private final JTextArea textArea;
+    private final NorthPanel northPanel;
 
-    public SouthPanel() {
+    public SouthPanel(NorthPanel northPanel) {
+        this.northPanel = northPanel;
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
         this.textArea = new AppTextArea(30, 1);
-        this.add(new UserInputLayout(addSubmitButton(), setScrollPane(textArea)));
-    }
-
-    private JScrollPane setScrollPane(JTextArea textArea) {
-        JScrollPane scrollPane = new JScrollPane(textArea);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scrollPane.setPreferredSize(new Dimension(0, 50));
-        scrollPane.getVerticalScrollBar().setBackground(appOrangeLight);
-        return scrollPane;
+        this.add(new UserInputLayout(addSubmitButton(), new AppScrollPane(0, 50, textArea)));
     }
 
     private JButton addSubmitButton() {
@@ -38,7 +29,10 @@ public class SouthPanel extends Panel {
     }
 
     private void sendMessage() {
-        System.out.println(textArea.getText());
-        textArea.setText("");
+        String message = textArea.getText();
+        if (!message.isEmpty()) {
+            northPanel.getClient().sendMessage(textArea.getText());
+            textArea.setText("");
+        }
     }
 }

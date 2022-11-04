@@ -4,7 +4,7 @@ import java.awt.Dimension;
 import static resources.strings.AppStrings.usersList;
 import static resources.styles.AppColors.appNavyBlue;
 import static resources.styles.AppColors.appOrange;
-import static resources.styles.Dimensions.eastPanelDim;
+import static resources.styles.AppDimensions.eastPanelDim;
 import resources.widgets.AppLabel;
 import resources.widgets.AppUserList;
 
@@ -20,9 +20,13 @@ public class WestPanel extends Panel {
         this.add(connectedUsers);
     }
 
-    public void displayConnectedUsers(String newConnectedUser) {
+    public void displayConnectedUser(String newConnectedUser) {
         if (!connectedUsers.getModel().contains(newConnectedUser)) {
             connectedUsers.getModel().addElement(newConnectedUser);
         }
+    }
+
+    public void removeDisconnectedUserFromTheList(String disconnectedUser) {
+        connectedUsers.getModel().removeElement(disconnectedUser);
     }
 }

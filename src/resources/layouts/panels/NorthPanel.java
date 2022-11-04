@@ -20,6 +20,7 @@ public class NorthPanel extends Panel {
     private String username;
     private final WestPanel westPanel;
     private final CentralPanel centralPanel;
+    private Client client;
 
 
     public NorthPanel(WestPanel westPanel, CentralPanel centralPanel) {
@@ -43,7 +44,7 @@ public class NorthPanel extends Panel {
 
     private void getNicknameAndConnectUser() {
         getUserNameAndDisableButton();
-        Client client = new Client(westPanel, centralPanel);
+        this.client = new Client(westPanel, centralPanel);
         client.getMessagesFromOtherUsers();
         client.sendMessage(username);
     }
@@ -52,6 +53,10 @@ public class NorthPanel extends Panel {
         AppSubmitButton button = new AppSubmitButton(enter_icon);
         button.addActionListener(e -> getNicknameAndConnectUser());
         return button;
+    }
+
+    public Client getClient() {
+        return client;
     }
 
 }
