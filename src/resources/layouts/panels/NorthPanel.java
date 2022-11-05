@@ -31,7 +31,8 @@ public class NorthPanel extends Panel {
         this.setLayout(new GridLayout(2, 1));
         this.add(new AppLabel(enterYourNickname, 20, appNavyBlue));
         this.button = addSubmissionButton();
-        this.textArea = new AppTextArea(1, 1, 20, textAreaDimension);
+        this.textArea = new AppTextArea(1, 1, 20);
+        textArea.setPreferredSize(textAreaDimension);
         this.add(new UserInputLayout(textArea, button));
     }
 

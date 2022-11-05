@@ -9,10 +9,9 @@ import static resources.styles.AppFonts.setAppLabelFont;
 
 public class AppTextArea extends JTextArea {
 
-    public AppTextArea(int rows, int columns, int fontSize, Dimension dimension){
+    public AppTextArea(int rows, int columns, int fontSize){
         this.setRows(rows);
         this.setColumns(columns);
-        this.setPreferredSize(dimension);
         this.setFont(setAppLabelFont(fontSize));
         this.setForeground(appNavyBlue);
         this.setMargin(new Insets(appMargin,appMargin,appMargin,appMargin));

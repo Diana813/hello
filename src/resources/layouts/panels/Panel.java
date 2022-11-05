@@ -1,6 +1,7 @@
 package resources.layouts.panels;
 
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import static resources.styles.AppColors.transparent;

@@ -1,13 +1,18 @@
 package resources.layouts.panels;
 
 
-import client.Client;
+import java.awt.font.FontRenderContext;
+import java.awt.font.LineBreakMeasurer;
+import java.awt.font.TextAttribute;
+import java.text.AttributedCharacterIterator;
+import java.text.AttributedString;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import resources.layouts.UserInputLayout;
 import static resources.strings.AppStrings.loginError;
 import static resources.styles.AppDimensions.textAreaDimension;
+import resources.styles.AppFonts;
 import static resources.styles.AppImages.send_icon;
 import resources.widgets.AppScrollPane;
 import resources.widgets.AppSubmitButton;
@@ -23,7 +28,8 @@ public class SouthPanel extends Panel {
         this.northPanel = northPanel;
         this.centralPanel = centralPanel;
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
-        this.textArea = new AppTextArea(30, 1, 20, textAreaDimension);
+        this.textArea = new AppTextArea(30, 1, 15);
+        textArea.setPreferredSize(textAreaDimension);
         this.add(new UserInputLayout(addSubmitButton(), new AppScrollPane(0, 50, textArea)));
     }
 
@@ -42,4 +48,5 @@ public class SouthPanel extends Panel {
             textArea.setText("");
         }
     }
+
 }

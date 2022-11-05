@@ -1,5 +1,6 @@
 package resources.layouts;
 
+import java.awt.event.KeyEvent;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import resources.layouts.panels.WestPanel;
@@ -22,6 +23,5 @@ public class ChatLayout extends JFrame {
         this.pack();
         this.setVisible(true);
     }
-
 
 }

@@ -10,6 +10,7 @@ import resources.widgets.AppLabel;
 
 public class CentralPanel extends Panel {
 
+
     public CentralPanel() {
         this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
     }
@@ -29,4 +30,5 @@ public class CentralPanel extends Panel {
     private boolean isMessageFromServer(String message) {
         return message.contains(userAdded) || message.contains(userRemoved) || message.contains(loginError);
     }
+
 }

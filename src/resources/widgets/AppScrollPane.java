@@ -4,7 +4,6 @@ import java.awt.Dimension;
 import javax.swing.JComponent;
 import javax.swing.JScrollPane;
 import static resources.styles.AppColors.appOrangeLight;
-import resources.styles.AppDimensions;
 
 public class AppScrollPane extends JScrollPane {
 
@@ -17,5 +16,6 @@ public class AppScrollPane extends JScrollPane {
         this.setAutoscrolls(true);
         this.getViewport().setOpaque(false);
         this.setOpaque(false);
+        this.setBackground(appOrangeLight);
     }
 }
