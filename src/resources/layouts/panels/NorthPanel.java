@@ -2,22 +2,22 @@ package resources.layouts.panels;
 
 import client.Client;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
 import javax.swing.JButton;
-import javax.swing.JTextArea;
 import resources.layouts.UserInputLayout;
 import static resources.strings.AppStrings.anonymousUser;
 import static resources.strings.AppStrings.enterYourNickname;
 import static resources.styles.AppColors.appNavyBlue;
-import resources.styles.AppDimensions;
 import static resources.styles.AppDimensions.textAreaDimension;
 import static resources.styles.AppImages.enter_icon;
 import resources.widgets.AppLabel;
-import resources.widgets.AppTextArea;
 import resources.widgets.AppSubmitButton;
+import resources.widgets.AppTextArea;
 
 public class NorthPanel extends Panel {
 
-    private final JTextArea textArea;
+    private final AppTextArea textArea;
     private final JButton button;
     private String username;
     private final WestPanel westPanel;
@@ -33,6 +33,7 @@ public class NorthPanel extends Panel {
         this.button = addSubmissionButton();
         this.textArea = new AppTextArea(1, 1, 20);
         textArea.setPreferredSize(textAreaDimension);
+        textArea.setEnterKeyActionListener(setEnterAction());
         this.add(new UserInputLayout(textArea, button));
     }
 
@@ -58,12 +59,18 @@ public class NorthPanel extends Panel {
         return button;
     }
 
+    private AbstractAction setEnterAction() {
+        return new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                getNicknameAndConnectUser();
+            }
+        };
+    }
+
     public Client getClient() {
         return client;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
-    }
 
 }
