@@ -11,6 +11,9 @@ import resources.layouts.panels.MainPanel;
 import resources.layouts.panels.WestPanel;
 import static resources.strings.AppStrings.userRemoved;
 
+/**
+ * Klasa Client odpowiedzialna za tworzenie nowego użytkownika
+ */
 public class Client {
 
     private Socket socket;
@@ -20,6 +23,11 @@ public class Client {
     private final WestPanel westPanel;
     private final MainPanel mainPanel;
 
+    /**
+     * Tworzy nowy obiekt klasy Client i łączy go z serwerem
+     * @param westPanel kontener do wyświetlania listy użytkowników
+     * @param mainPanel kontener do wyświetlania wiadomości od użytkowników
+     */
     public Client(WestPanel westPanel, MainPanel mainPanel) {
         this.westPanel = westPanel;
         this.mainPanel = mainPanel;
@@ -34,6 +42,10 @@ public class Client {
         }
     }
 
+    /**
+     * Metoda wysyłająca strumień danych do serwera
+     * @param message wiadomość do wysłania
+     */
     public void sendMessage(String message) {
         try {
             writer.write(message);
@@ -44,6 +56,9 @@ public class Client {
         }
     }
 
+    /**
+     * Metoda pobierająca strumień danych z serwera
+     */
     public void getMessagesFromOtherUsers() {
         new Thread(() -> {
             String messageFromChat;
@@ -58,6 +73,10 @@ public class Client {
         }).start();
     }
 
+    /**
+     * Metoda przekazująca odebrane z serwera dane do odpowiedniego kontenera w celu prawidłowego wyświetlenia
+     * @param message wiadomość do wyświetlenia
+     */
     private void displayMessage(String message) {
         if (isElementFromConnectedUsersList(message)) {
             westPanel.displayConnectedUser(getUsernameFromServerMessage(message, "user: "));
@@ -69,18 +88,38 @@ public class Client {
         }
     }
 
+    /**
+     * Metoda ekstrahująca imię użytkownika z otrzymanej z serwera wiadomości
+     * @param message otrzymana wiadomość z serwera
+     * @param substringToRemove część wiadomości, którą należy usunąć
+     * @return imię użytkownika
+     */
     private String getUsernameFromServerMessage(String message, String substringToRemove){
         return message.replace(substringToRemove, "").trim();
     }
 
+    /**
+     * Metoda sprawdzająca, czy otrzymana wiadomość jest elementem listy połączonych użytkowników wysyłanej przez serwer
+     * @param message otrzymana wiadomość
+     * @return true lub false
+     */
     private boolean isElementFromConnectedUsersList(String message){
         return message.contains("user: ");
     }
 
+    /**
+     * Metoda sprawdzająca, czy otrzymana wiadomość jest informacją z serwera o opuszczeniu rozmowy przez użytkownika
+     * @param message otrzymana wiadomość
+     * @return true lub false
+     */
     private boolean isUserDisconnectedInfo(String message){
         return message.contains(userRemoved);
     }
 
+    /**
+     * Metoda uruchamiająca aplikację użytkownika
+     * @param args
+     */
     public static void main(String[] args) {
         new ChatLayout();
     }
