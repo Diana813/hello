@@ -2,7 +2,9 @@ package resources.styles;
 
 import java.awt.Color;
 
-
+/**
+ * Klasa zbiorcza dla wszystkich kolorów używanych w aplikacji
+ */
 public class AppColors {
 
     public static Color appOrange = new Color(0xffa432);

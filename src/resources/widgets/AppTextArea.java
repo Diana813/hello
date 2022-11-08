@@ -11,9 +11,18 @@ import static resources.styles.AppColors.appNavyBlue;
 import static resources.styles.AppDimensions.appMargin;
 import static resources.styles.AppFonts.setAppLabelFont;
 
+/**
+ * Klasa AppTextArea odpowiadająca za wygląd pól tekstowych w aplikacji
+ */
 public class AppTextArea extends JTextArea {
 
 
+    /**
+     * Tworzy nowy obiekt typu AppTextArea
+     * @param rows liczba wierszy
+     * @param columns liczba kolumn
+     * @param fontSize wielkość czcionki
+     */
     public AppTextArea(int rows, int columns, int fontSize) {
         this.setRows(rows);
         this.setColumns(columns);
@@ -24,6 +33,11 @@ public class AppTextArea extends JTextArea {
         this.setWrapStyleWord(true);
     }
 
+    /**
+     * Metoda dodająca do pola tekstowego funkcję oczekiwania na wciśnięcie przycisku Enter
+     * @param enterAction to obiekt typu AbstractAction, za pomocą którego przekazana zostanie odpowiednia
+     *                    akcja do wykonania po naciśnięciu przycisku Enter
+     */
     public void setEnterKeyActionListener(AbstractAction enterAction) {
         InputMap inputMap = this.getInputMap(WHEN_FOCUSED);
         ActionMap actionMap = this.getActionMap();

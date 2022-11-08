@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="layouts doc">
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/UserMessageLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/UserMessageLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/UserAreaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/UserAreaPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/strings/AppStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/strings/AppStrings.java" afterDir="false" />
+    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="strings doc">
+      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppColors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppColors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppDimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppDimensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppFonts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppFonts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppImages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppChatMessageTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppChatMessageTextArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppScrollPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppSubmitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppSubmitButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppTextArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppUserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppUserList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667893079138</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="strings doc">
+      <created>1667893675092</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667893675092</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +215,7 @@
     <MESSAGE value="handle message text area size" />
     <MESSAGE value="handle enter clicked" />
     <MESSAGE value="layouts doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="layouts doc" />
+    <MESSAGE value="strings doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="strings doc" />
   </component>
 </project>
