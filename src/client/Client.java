@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import resources.layouts.ChatLayout;
-import resources.layouts.panels.CentralPanel;
+import resources.layouts.panels.MainPanel;
 import resources.layouts.panels.WestPanel;
 import static resources.strings.AppStrings.userRemoved;
 
@@ -18,11 +18,11 @@ public class Client {
     private BufferedWriter writer;
     private ClientConnectionHandler connectionHandler;
     private final WestPanel westPanel;
-    private final CentralPanel centralPanel;
+    private final MainPanel mainPanel;
 
-    public Client(WestPanel westPanel, CentralPanel centralPanel) {
+    public Client(WestPanel westPanel, MainPanel mainPanel) {
         this.westPanel = westPanel;
-        this.centralPanel = centralPanel;
+        this.mainPanel = mainPanel;
         try {
             this.socket = new Socket("localhost", 9999);
             this.writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
@@ -63,9 +63,9 @@ public class Client {
             westPanel.displayConnectedUser(getUsernameFromServerMessage(message, "user: "));
         }else if(isUserDisconnectedInfo(message)){
             westPanel.removeDisconnectedUserFromTheList(getUsernameFromServerMessage(message, userRemoved));
-            centralPanel.displayMessage(message);
+            mainPanel.displayMessage(message);
         } else {
-            centralPanel.displayMessage(message);
+            mainPanel.displayMessage(message);
         }
     }
 

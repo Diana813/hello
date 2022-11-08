@@ -17,6 +17,9 @@ import resources.styles.AppFonts;
 import static resources.styles.AppImages.user_icon;
 import resources.widgets.AppChatMessageTextArea;
 
+/**
+ * Klasa UserMessageLayout jest odpowiedzialna za fragment interfejsu służący do wyświetlania wiadomości użytkowników
+ */
 public class UserMessageLayout extends Panel {
 
     private final String message;
@@ -25,6 +28,10 @@ public class UserMessageLayout extends Panel {
     private final int numberOfRows;
 
 
+    /**
+     * Tworzy nowy obiekt UserMassageLayout
+     * @param message to wiadomość tekstowa przezaczona do wyświetlenia
+     */
     public UserMessageLayout(String message) {
         numberOfRows = calculateTextAreaNumberOfLines(message);
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
@@ -35,6 +42,10 @@ public class UserMessageLayout extends Panel {
         this.setAlignmentY(CENTER_ALIGNMENT);
     }
 
+    /**
+     * Metoda odpowiedzialna za umieszczenie wiadomości po prawej lub lewej stronie panelu głównego, w zależności
+     * od tego czy wiadomość pochodzi od danego użytkownika, czy od innych uczestników rozmowy
+     */
     public void setCorrectAlignment() {
         if (!message.contains(me)) {
             this.add(label);
@@ -47,6 +58,12 @@ public class UserMessageLayout extends Panel {
         }
     }
 
+    /**
+     * Metoda odpowiedzialna za obliczenie ilości linijek tekstu w pou tekstowym w zależności użytej czcionki,
+     * szerokości pola tekstowego i długości otrzymanej wiadomości
+     * @param message to wiadomość tekstowa
+     * @return liczbę linijek tekstu do wyświetlenia
+     */
     private int calculateTextAreaNumberOfLines(String message) {
         AttributedString text = new AttributedString(message);
         Font font = AppFonts.setAppLabelFont(15);

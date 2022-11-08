@@ -8,13 +8,24 @@ import static resources.strings.AppStrings.userRemoved;
 import static resources.styles.AppColors.appNavyBlue;
 import resources.widgets.AppLabel;
 
-public class CentralPanel extends Panel {
+/**
+ * Klasa MainPanel, rozszerzająca klasę Panel, jest kontenerem, w którym wyświetlane są wiadomości wysyłane przez
+ * użytkowników komunikatora.
+ */
+public class MainPanel extends Panel {
 
-
-    public CentralPanel() {
+    /**
+     * Tworzy nowy obiekt MainPanel.
+     */
+    public MainPanel() {
         this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
     }
 
+    /**
+     * Wyświetla otrzymane wiadomości w odpowiedni sposób. Używa innego widgetu dla informacji nadawanych przez serwer,
+     * a innego do wyświetlania wiadomości od użytkownika.
+     * @param message jest wiadomością tekstową otrzymaną przez użytkownika
+     */
     public void displayMessage(String message) {
         if (isMessageFromServer(message)) {
             this.add(new AppLabel(message, 15, appNavyBlue));
@@ -27,6 +38,11 @@ public class CentralPanel extends Panel {
         this.repaint();
     }
 
+    /**
+     * Sprawdza, czy otrzymana wiadomość jest broadcastem wysyłanym przez serwer do wszystkich uczestników rozmowy
+     * @param message jest wiadomością tekstową otrzymaną przez użytkownika
+     * @return zwraca wartość true lub false
+     */
     private boolean isMessageFromServer(String message) {
         return message.contains(userAdded) || message.contains(userRemoved) || message.contains(loginError);
     }
