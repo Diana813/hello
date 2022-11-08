@@ -77,7 +77,8 @@ public class UserAreaPanel extends Panel {
     }
 
     /**
-     * Metoda tworząca nowy obiekt klasy AppSubmitButton i nadająca mu funkcję wywoływania metody getNicknameAndConnectUser()
+     * Metoda tworząca nowy obiekt klasy AppSubmitButton i nadająca mu funkcję wywoływania
+     * metody getNicknameAndConnectUser()
      * @return AppSubmitButton
      */
     private AppSubmitButton addSubmissionButton() {

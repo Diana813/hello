@@ -65,7 +65,7 @@ public class MessageAreaPanel extends Panel {
     }
 
     /**
-     * Metoda odpowiedzialna na wywoływanie wywoływanie metody sendMessage() po kliknięciu przycisku Enter
+     * Metoda odpowiedzialna na wywoływanie metody sendMessage() po kliknięciu przycisku Enter
      * @return AbstractAction
      */
     private AbstractAction setEnterAction() {

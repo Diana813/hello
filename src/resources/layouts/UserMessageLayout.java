@@ -18,7 +18,7 @@ import static resources.styles.AppImages.user_icon;
 import resources.widgets.AppChatMessageTextArea;
 
 /**
- * Klasa UserMessageLayout jest odpowiedzialna za fragment interfejsu służący do wyświetlania wiadomości użytkowników
+ * Klasa UserMessageLayout jest odpowiedzialna za fragment interfejsu służący do wyświetlania wiadomości od użytkowników
  */
 public class UserMessageLayout extends Panel {
 
@@ -59,7 +59,7 @@ public class UserMessageLayout extends Panel {
     }
 
     /**
-     * Metoda odpowiedzialna za obliczenie ilości linijek tekstu w pou tekstowym w zależności użytej czcionki,
+     * Metoda odpowiedzialna za obliczenie ilości linijek tekstu w polu tekstowym w zależności użytej czcionki,
      * szerokości pola tekstowego i długości otrzymanej wiadomości
      * @param message to wiadomość tekstowa
      * @return liczbę linijek tekstu do wyświetlenia

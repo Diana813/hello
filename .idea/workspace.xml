@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="handle enter clicked">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/ChatLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/ChatLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/UserInputLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/UserInputLayout.java" afterDir="false" />
+    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="layouts doc">
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/UserMessageLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/UserMessageLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/CentralPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/NorthPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/UserAreaPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/SouthPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/WestPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/WestPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/UserAreaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/UserAreaPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/strings/AppStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/strings/AppStrings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667839444621</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="layouts doc">
+      <created>1667893079138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667893079138</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +201,7 @@
     <MESSAGE value="Handle login error" />
     <MESSAGE value="handle message text area size" />
     <MESSAGE value="handle enter clicked" />
-    <option name="LAST_COMMIT_MESSAGE" value="handle enter clicked" />
+    <MESSAGE value="layouts doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="layouts doc" />
   </component>
 </project>
