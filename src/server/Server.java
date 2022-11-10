@@ -60,7 +60,7 @@ public class Server {
 
     /**
      * Metoda uruchamijąca działanie aplikacji Server
-     * @param args
+     * @param args argumenty wiersza poleceń Java.
      * @throws IOException wyjątek generowany przez nieudane operacje wejścia/wyjścia
      */
     public static void main(String[] args) throws IOException {

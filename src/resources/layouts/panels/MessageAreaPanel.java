@@ -1,7 +1,6 @@
 package resources.layouts.panels;
 
 
-import client.Client;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.BoxLayout;
@@ -21,16 +20,17 @@ import resources.widgets.AppTextArea;
 public class MessageAreaPanel extends Panel {
 
     private final AppTextArea textArea;
-    private final Client client;
+    private final UserAreaPanel userAreaPanel;
     private final MainPanel mainPanel;
 
     /**
      * Tworzy nowy obiekt klasy MessageAreaPanel
-     * @param client jest obiektem reprezentującym zalogowanego użytkownika
+     * @param userAreaPanel jest kontenerem, w którym użytkownik wpisuje swoje dane i łączy
+     *                      się z serwerem
      * @param mainPanel jest kontenerem, w którym wyświetlane są wiadomości od użytkownika
      */
-    public MessageAreaPanel(Client client, MainPanel mainPanel) {
-        this.client = client;
+    public MessageAreaPanel(UserAreaPanel userAreaPanel, MainPanel mainPanel) {
+        this.userAreaPanel = userAreaPanel;
         this.mainPanel = mainPanel;
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
         this.textArea = new AppTextArea(30, 1, 15);
@@ -45,10 +45,10 @@ public class MessageAreaPanel extends Panel {
      */
     private void sendMessage() {
         String message = textArea.getText();
-        if (client == null) {
+        if (userAreaPanel.getClient() == null) {
             mainPanel.displayMessage(loginError);
         } else if (!message.isEmpty()) {
-            client.sendMessage(textArea.getText());
+            userAreaPanel.getClient().sendMessage(textArea.getText());
             textArea.setText("");
         }
     }

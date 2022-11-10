@@ -1,6 +1,5 @@
 package resources.layouts.panels;
 
-import client.Client;
 import java.awt.BorderLayout;
 import static resources.styles.AppDimensions.defaultChatWindowHeight;
 import resources.widgets.AppScrollPane;
@@ -19,10 +18,9 @@ public class EastPanel extends Panel {
         this.setLayout(new BorderLayout());
         MainPanel mainPanel = new MainPanel();
         UserAreaPanel userAreaPanel = new UserAreaPanel(westPanel, mainPanel);
-        Client client = userAreaPanel.getClient();
         this.add(mainPanel, BorderLayout.CENTER);
         this.add(userAreaPanel, BorderLayout.NORTH);
-        this.add(new MessageAreaPanel(client, mainPanel), BorderLayout.SOUTH);
+        this.add(new MessageAreaPanel(userAreaPanel, mainPanel), BorderLayout.SOUTH);
         this.add(new AppScrollPane(0, defaultChatWindowHeight, mainPanel));
     }
 }

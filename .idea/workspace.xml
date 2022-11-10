@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="all resources doc">
+    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="javadocs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientConnectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/UserMessageLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/UserMessageLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppDimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppDimensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppChatMessageTextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppChatMessageTextArea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ServerConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ServerConnectionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,17 +26,22 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GlMIXD0tTceVSlQhza3ESIlwme" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -50,6 +59,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\diana\IdeaProjects\hello\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\diana\IdeaProjects\hello\javadocs" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Client">

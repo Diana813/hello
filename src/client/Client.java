@@ -57,7 +57,7 @@ public class Client {
     }
 
     /**
-     * Metoda pobierająca strumień danych z serwera
+     * Metoda oczekująca na strumień danych z serwera (w osobnym wątku)
      */
     public void getMessagesFromOtherUsers() {
         new Thread(() -> {
@@ -74,7 +74,7 @@ public class Client {
     }
 
     /**
-     * Metoda przekazująca odebrane z serwera dane do odpowiedniego kontenera w celu prawidłowego wyświetlenia
+     * Metoda przekazująca odebrane z serwera dane do odpowiedniego kontenera w celu prawidłowego wyświetlenia wiadimości
      * @param message wiadomość do wyświetlenia
      */
     private void displayMessage(String message) {
@@ -89,7 +89,7 @@ public class Client {
     }
 
     /**
-     * Metoda ekstrahująca imię użytkownika z otrzymanej z serwera wiadomości
+     * Metoda ekstrahująca imię użytkownika z otrzymanej informacji o połączonych użytkownikach
      * @param message otrzymana wiadomość z serwera
      * @param substringToRemove część wiadomości, którą należy usunąć
      * @return imię użytkownika
@@ -118,7 +118,7 @@ public class Client {
 
     /**
      * Metoda uruchamiająca aplikację użytkownika
-     * @param args
+     * @param args argumenty wiersza poleceń Java.
      */
     public static void main(String[] args) {
         new ChatLayout();

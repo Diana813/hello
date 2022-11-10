@@ -17,5 +17,7 @@ public class AppDimensions {
     public static int eastPanelDim = 150;
 
     public static Dimension textAreaDimension = new Dimension(defaultTextFieldWidth, 0);
+    public static int messageAreaWidth = defaultChatWindowWidth - 100;
+    public static int messageLayoutWidth = defaultChatWindowWidth - 50;
 
 }

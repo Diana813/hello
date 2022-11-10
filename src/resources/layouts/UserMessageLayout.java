@@ -11,8 +11,8 @@ import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import resources.layouts.panels.Panel;
 import static resources.strings.AppStrings.me;
-import resources.styles.AppDimensions;
-import static resources.styles.AppDimensions.defaultChatWindowWidth;
+import static resources.styles.AppDimensions.messageAreaWidth;
+import static resources.styles.AppDimensions.messageLayoutWidth;
 import resources.styles.AppFonts;
 import static resources.styles.AppImages.user_icon;
 import resources.widgets.AppChatMessageTextArea;
@@ -35,7 +35,7 @@ public class UserMessageLayout extends Panel {
     public UserMessageLayout(String message) {
         numberOfRows = calculateTextAreaNumberOfLines(message);
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
-        this.setPreferredSize(new Dimension(defaultChatWindowWidth - 40, numberOfRows * 25));
+        this.setPreferredSize(new Dimension(messageLayoutWidth, numberOfRows * 25));
         this.setMaximumSize(new Dimension(2000, numberOfRows * 25));
         this.message = message;
         this.label = new JLabel(user_icon);
@@ -70,13 +70,13 @@ public class UserMessageLayout extends Panel {
         text.addAttribute(TextAttribute.FONT, font);
         FontRenderContext fontRenderContext = getFontMetrics(font)
                 .getFontRenderContext();
-        AttributedCharacterIterator charIt = text.getIterator();
-        LineBreakMeasurer lineMeasurer = new LineBreakMeasurer(charIt, fontRenderContext);
-        float formatWidth = (float) AppDimensions.defaultChatWindowWidth - 40;
-        lineMeasurer.setPosition(charIt.getBeginIndex());
+        AttributedCharacterIterator iterator = text.getIterator();
+        LineBreakMeasurer lineMeasurer = new LineBreakMeasurer(iterator, fontRenderContext);
+        float formatWidth = (float) messageAreaWidth;
+        lineMeasurer.setPosition(iterator.getBeginIndex());
 
         int numberOfLines = 1;
-        while (lineMeasurer.getPosition() < charIt.getEndIndex()) {
+        while (lineMeasurer.getPosition() < iterator.getEndIndex()) {
             lineMeasurer.nextLayout(formatWidth);
             numberOfLines++;
         }

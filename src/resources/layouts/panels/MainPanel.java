@@ -24,7 +24,7 @@ public class MainPanel extends Panel {
     /**
      * Wyświetla otrzymane wiadomości w odpowiedni sposób. Używa innego widgetu dla informacji nadawanych przez serwer,
      * a innego do wyświetlania wiadomości od użytkowników.
-     * @param message jest wiadomością tekstową otrzymaną przez użytkownika
+     * @param message jest otrzymaną wiadomością
      */
     public void displayMessage(String message) {
         if (isMessageFromServer(message)) {
