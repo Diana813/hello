@@ -7,7 +7,6 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import resources.layouts.UserInputLayout;
 import static resources.strings.AppStrings.loginError;
-import static resources.styles.AppDimensions.textAreaDimension;
 import static resources.styles.AppImages.send_icon;
 import resources.widgets.AppScrollPane;
 import resources.widgets.AppSubmitButton;
@@ -22,6 +21,7 @@ public class MessageAreaPanel extends Panel {
     private final AppTextArea textArea;
     private final UserAreaPanel userAreaPanel;
     private final MainPanel mainPanel;
+    private final AppScrollPane scrollPane;
 
     /**
      * Tworzy nowy obiekt klasy MessageAreaPanel
@@ -29,14 +29,14 @@ public class MessageAreaPanel extends Panel {
      *                      się z serwerem
      * @param mainPanel jest kontenerem, w którym wyświetlane są wiadomości od użytkownika
      */
-    public MessageAreaPanel(UserAreaPanel userAreaPanel, MainPanel mainPanel) {
+    public MessageAreaPanel(UserAreaPanel userAreaPanel, MainPanel mainPanel, AppScrollPane scrollPane) {
         this.userAreaPanel = userAreaPanel;
         this.mainPanel = mainPanel;
+        this.scrollPane = scrollPane;
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
-        this.textArea = new AppTextArea(30, 1, 15);
-        textArea.setPreferredSize(textAreaDimension);
+        this.textArea = new AppTextArea(1, 1, 15);
         textArea.setEnterKeyActionListener(setEnterAction());
-        this.add(new UserInputLayout(addSubmitButton(), new AppScrollPane(0, 50, textArea)));
+        this.add(new UserInputLayout(addSubmitButton(), new AppScrollPane(textArea)));
     }
 
     /**
@@ -47,9 +47,13 @@ public class MessageAreaPanel extends Panel {
         String message = textArea.getText();
         if (userAreaPanel.getClient() == null) {
             mainPanel.displayMessage(loginError);
+            scrollPane.revalidate();
+            scrollPane.repaint();
         } else if (!message.isEmpty()) {
             userAreaPanel.getClient().sendMessage(textArea.getText());
             textArea.setText("");
+            scrollPane.revalidate();
+            scrollPane.repaint();
         }
     }
 

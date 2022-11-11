@@ -12,6 +12,7 @@ import static resources.styles.AppColors.appNavyBlue;
 import static resources.styles.AppDimensions.textAreaDimension;
 import static resources.styles.AppImages.enter_icon;
 import resources.widgets.AppLabel;
+import resources.widgets.AppScrollPane;
 import resources.widgets.AppSubmitButton;
 import resources.widgets.AppTextArea;
 
@@ -26,6 +27,7 @@ public class UserAreaPanel extends Panel {
     private final WestPanel westPanel;
     private final MainPanel mainPanel;
     private Client client;
+    private AppScrollPane scrollPane;
 
 
     /**
@@ -33,9 +35,10 @@ public class UserAreaPanel extends Panel {
      * @param westPanel jest kontenerem zawierającym listę zalogowanych użytkowników
      * @param mainPanel jest kontenerem, w którym wyświetlane są wiadomości
      */
-    public UserAreaPanel(WestPanel westPanel, MainPanel mainPanel) {
+    public UserAreaPanel(WestPanel westPanel, MainPanel mainPanel, AppScrollPane scrollPane) {
         this.westPanel = westPanel;
         this.mainPanel = mainPanel;
+        this.scrollPane = scrollPane;
         this.setLayout(new GridLayout(2, 1));
         this.add(new AppLabel(enterYourNickname, 20, appNavyBlue));
         this.button = addSubmissionButton();
@@ -74,6 +77,8 @@ public class UserAreaPanel extends Panel {
         this.client = new Client(westPanel, mainPanel);
         client.getMessagesFromOtherUsers();
         client.sendMessage(username);
+        scrollPane.revalidate();
+        scrollPane.repaint();
     }
 
     /**
