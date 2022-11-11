@@ -34,7 +34,7 @@ public class MainPanel extends Panel {
             label.setCorrectAlignment();
             this.add(label);
         }
-        this.validate();
+        this.revalidate();
         this.repaint();
     }
 

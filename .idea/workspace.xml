@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="docs ready, scroll pane not working properly">
+    <list default="true" id="74db37dc-41a5-4252-85c3-0bd844629089" name="Changes" comment="scroll bar working for one user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/ChatLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/ChatLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/EastPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MainPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/MessageAreaPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/layouts/panels/UserAreaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/layouts/panels/UserAreaPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/styles/AppDimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/styles/AppDimensions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/widgets/AppScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/widgets/AppScrollPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668066953707</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="scroll bar working for one user">
+      <created>1668174087634</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668174087634</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +244,7 @@
     <MESSAGE value="strings doc" />
     <MESSAGE value="all resources doc" />
     <MESSAGE value="docs ready, scroll pane not working properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs ready, scroll pane not working properly" />
+    <MESSAGE value="scroll bar working for one user" />
+    <option name="LAST_COMMIT_MESSAGE" value="scroll bar working for one user" />
   </component>
 </project>

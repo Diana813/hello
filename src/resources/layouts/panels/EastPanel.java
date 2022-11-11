@@ -19,10 +19,9 @@ public class EastPanel extends Panel {
         this.setLayout(new BorderLayout());
         this.setPreferredSize(eastPanelDimension);
         MainPanel mainPanel = new MainPanel();
-        AppScrollPane scrollPane = new AppScrollPane(mainPanel);
-        UserAreaPanel userAreaPanel = new UserAreaPanel(westPanel, mainPanel, scrollPane);
-        this.add(scrollPane, BorderLayout.CENTER);
+        UserAreaPanel userAreaPanel = new UserAreaPanel(westPanel, mainPanel);
+        this.add(new AppScrollPane(mainPanel), BorderLayout.CENTER);
         this.add(userAreaPanel, BorderLayout.NORTH);
-        this.add(new MessageAreaPanel(userAreaPanel, mainPanel, scrollPane), BorderLayout.SOUTH);
+        this.add(new MessageAreaPanel(userAreaPanel, mainPanel), BorderLayout.SOUTH);
     }
 }

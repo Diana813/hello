@@ -21,18 +21,17 @@ public class MessageAreaPanel extends Panel {
     private final AppTextArea textArea;
     private final UserAreaPanel userAreaPanel;
     private final MainPanel mainPanel;
-    private final AppScrollPane scrollPane;
 
     /**
      * Tworzy nowy obiekt klasy MessageAreaPanel
+     *
      * @param userAreaPanel jest kontenerem, w którym użytkownik wpisuje swoje dane i łączy
      *                      się z serwerem
-     * @param mainPanel jest kontenerem, w którym wyświetlane są wiadomości od użytkownika
+     * @param mainPanel     jest kontenerem, w którym wyświetlane są wiadomości od użytkownika
      */
-    public MessageAreaPanel(UserAreaPanel userAreaPanel, MainPanel mainPanel, AppScrollPane scrollPane) {
+    public MessageAreaPanel(UserAreaPanel userAreaPanel, MainPanel mainPanel) {
         this.userAreaPanel = userAreaPanel;
         this.mainPanel = mainPanel;
-        this.scrollPane = scrollPane;
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
         this.textArea = new AppTextArea(1, 1, 15);
         textArea.setEnterKeyActionListener(setEnterAction());
@@ -47,19 +46,16 @@ public class MessageAreaPanel extends Panel {
         String message = textArea.getText();
         if (userAreaPanel.getClient() == null) {
             mainPanel.displayMessage(loginError);
-            scrollPane.revalidate();
-            scrollPane.repaint();
         } else if (!message.isEmpty()) {
             userAreaPanel.getClient().sendMessage(textArea.getText());
             textArea.setText("");
-            scrollPane.revalidate();
-            scrollPane.repaint();
         }
     }
 
     /**
      * Metoda odpowiedzialna za utworzenie przycisku, będącego obiektem klasy AppSubmitButton i nadanie mu funkcji
      * wywoływania metody sendMessage()
+     *
      * @return obiekt klasy JButton
      */
     private JButton addSubmitButton() {
@@ -70,6 +66,7 @@ public class MessageAreaPanel extends Panel {
 
     /**
      * Metoda odpowiedzialna na wywoływanie metody sendMessage() po kliknięciu przycisku Enter
+     *
      * @return AbstractAction
      */
     private AbstractAction setEnterAction() {

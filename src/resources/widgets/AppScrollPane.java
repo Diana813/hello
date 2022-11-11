@@ -11,6 +11,7 @@ public class AppScrollPane extends JScrollPane {
 
     /**
      * Tworzy nowy obiekt typu AppScrollPane
+     *
      * @param component komponent objęty obszarem skrolowania
      */
     public AppScrollPane(JComponent component) {
@@ -18,9 +19,9 @@ public class AppScrollPane extends JScrollPane {
         this.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         this.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         this.getVerticalScrollBar().setBackground(appNavyBlue);
-        this.setAutoscrolls(true);
         this.getViewport().setOpaque(false);
         this.setOpaque(false);
         this.setBackground(appNavyBlue);
+        this.getVerticalScrollBar().addAdjustmentListener(e -> e.getAdjustable().setValue(e.getAdjustable().getMaximum()));
     }
 }
