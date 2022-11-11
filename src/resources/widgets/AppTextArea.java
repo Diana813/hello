@@ -16,7 +16,6 @@ import static resources.styles.AppFonts.setAppLabelFont;
  */
 public class AppTextArea extends JTextArea {
 
-
     /**
      * Tworzy nowy obiekt typu AppTextArea
      * @param rows liczba wierszy

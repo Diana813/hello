@@ -8,7 +8,7 @@ import java.awt.Font;
 public class AppFonts {
 
     /**
-     * Metoda odpowiedzialna za utworzenie czcionki używanej w aplikacji
+     * Metoda odpowiedzialna za ustawienie czcionki używanej w aplikacji
      * @param fontSize to wielkość czcionki
      * @return Font
      */
